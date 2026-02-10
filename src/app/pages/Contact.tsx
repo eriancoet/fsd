@@ -1,21 +1,16 @@
-import { Mail, Github, Linkedin, Twitter } from 'lucide-react';
-import { useState } from 'react';
+import { Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { useState } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-    alert('Thanks for reaching out! This is a demo form.');
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -27,12 +22,25 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl sm:text-5xl mb-4">Get in Touch</h1>
         <p className="text-xl text-gray-600 mb-12">
-        Interested in collaborating on a UI or frontend project? Let’s connect.  
-              </p>
+          Interested in collaborating on a UI or frontend project? Let’s connect.
+        </p>
 
         <div className="grid gap-12 lg:grid-cols-2">
+          {/* FORM */}
           <div>
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <form
+            name="contact"
+            method="POST"
+            action="/thank-you"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            className="space-y-6"
+>
+
+              {/* Netlify required hidden fields */}
+              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="bot-field" />
+
               <div>
                 <label htmlFor="name" className="block text-sm mb-2">
                   Name
@@ -87,40 +95,41 @@ export default function Contact() {
             </form>
           </div>
 
+          {/* CONTACT INFO */}
           <div>
             <h2 className="text-2xl mb-6">Connect With Me</h2>
-            
+
             <div className="space-y-4 mb-8">
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:riancoetz@gmail.com"
                 className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors"
               >
                 <Mail className="w-6 h-6" />
                 <span>riancoetz@gmail.com</span>
               </a>
-              
+
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/eriancoet"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors"
               >
                 <Github className="w-6 h-6" />
-                <span>https://github.com/eriancoet</span>
+                <span>github.com/eriancoet</span>
               </a>
-              
+
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/rian-coetzee-865337218/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors"
               >
                 <Linkedin className="w-6 h-6" />
-                <span>https://www.linkedin.com/in/rian-coetzee-865337218/</span>
+                <span>LinkedIn</span>
               </a>
-              
+
               <a
-                href="https://twitter.com/yourusername"
+                href="https://twitter.com/riancoetz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-gray-600 hover:text-blue-600 transition-colors"
@@ -133,8 +142,8 @@ export default function Contact() {
             <div className="border-2 border-gray-200 rounded-lg p-6">
               <h3 className="text-xl mb-3">Looking to collaborate?</h3>
               <p className="text-gray-600 mb-4">
-                I'm always open to discussing new projects, creative ideas, or opportunities
-                to be part of your vision.
+                I’m always open to discussing new projects, creative ideas, or
+                opportunities to be part of your vision.
               </p>
               <p className="text-gray-600">
                 Response time: Usually within 24 hours
