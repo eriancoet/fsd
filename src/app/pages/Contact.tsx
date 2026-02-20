@@ -22,7 +22,7 @@ export default function Contact() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl sm:text-5xl mb-4">Get in Touch</h1>
         <p className="text-xl text-gray-600 mb-12">
-          Interested in collaborating on a UI or frontend project? Let’s connect.
+          Interested in collaborating on a Full Stack project? Let’s connect.
         </p>
 
         <div className="grid gap-12 lg:grid-cols-2">

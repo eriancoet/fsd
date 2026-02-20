@@ -9,7 +9,7 @@ export default function Home() {
           Hi, I'm <span className="text-blue-600">Rian</span>
         </h1>
         <p className="text-xl sm:text-2xl text-gray-600 mb-8 max-w-2xl">
-        A UI Engineer focused on building clean, responsive interfaces with React.        </p>
+        A Fullstack deveper focused on building fast, clean, responsive applications.        </p>
         <div className="flex flex-wrap gap-4">
           <Link
             to="/projects"
