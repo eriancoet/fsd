@@ -6,8 +6,8 @@ const projects = [
     title: 'Project Management App',
     description: 'Execute any project process, add tasks to projects on one platform.',
     tags: ['React', 'Typescript', 'Tailwindcss'],
-    link: 'https://pma-rian.netlify.app/',
-    github: 'https://github.com/eriancoet/PMA',
+    link: 'https://pma-fsd.netlify.app/',
+    github: 'https://github.com/eriancoet/fsd-pma',
   },
   {
     id: 2,
