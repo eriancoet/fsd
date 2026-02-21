@@ -21,6 +21,7 @@ export default function About() {
             I also use AI tools daily — GitHub Copilot, Gemini, Claude, and ChatGPT — to accelerate development, explore better solutions, and continuously improve my workflow and code quality.
           </p>
         </div>
+     
 
         <div>
           <h2 className="text-2xl mb-8">Skills</h2>
@@ -48,6 +49,14 @@ export default function About() {
                 <li>AI Tools (Copilot, Gemini, Claude, ChatGPT)</li>
               </ul>
             </div>
+            <div> <a
+        href="/Rian-Coetzee-CV.pdf"
+        download
+            className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+      >
+        Download CV
+      </a></div>
+               
           </div>
         </div>
       </div>
